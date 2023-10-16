@@ -1,0 +1,55 @@
+\documentclass{article}
+
+% Packages
+\usepackage[utf8]{inputenc} % UTF-8 encoding
+\usepackage{listings} % For including code snippets
+\usepackage{inconsolata} % Inconsolata monospaced font
+\usepackage{xcolor} % For custom colors
+\usepackage{lipsum} % Generates Lorem Ipsum text for demonstration
+
+% Listings Settings
+\lstdefinestyle{mystyle}{
+    basicstyle=\ttfamily, % Use monospaced font for listings
+    breaklines=true, % Wrap long lines
+    language=SQL, % Set default language (can be changed)
+    keywordstyle=\color{blue}, % Keywords in blue
+    commentstyle=\color{green!40!black}, % Comments in green
+    numbers=left, % Line numbers on the left
+    numberstyle=\tiny\color{gray}, % Line numbers style
+    frame=single, % Single frame around code
+    tabsize=4, % Tab size
+    extendedchars=true,
+    literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1,
+    showstringspaces=false % Don't show spaces in strings
+}
+
+% Title and Author
+\title{Advanced SQL queries}
+\author{D'Ambrosi Denis}
+\date{\today} % Use \date{} for a specific date
+
+\begin{document}
+
+\maketitle
+\clearpage
+
+\section*{Exercise 1}
+\lstinputlisting[style=mystyle]{es1.sql}
+\clearpage
+
+\section*{Exercise 2}
+\lstinputlisting[style=mystyle]{es2.sql}
+\clearpage
+
+\section*{Exercise 3}
+\lstinputlisting[style=mystyle]{es3.sql}
+\clearpage
+
+\section*{Exercise 4}
+\lstinputlisting[style=mystyle]{es4.sql}
+\clearpage
+
+\section*{Exercise 5}
+\lstinputlisting[style=mystyle]{es5.sql}
+
+\end{document}
