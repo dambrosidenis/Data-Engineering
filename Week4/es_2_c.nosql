@@ -1,0 +1,24 @@
+db.video_movies.aggregate([
+    {
+      $lookup: {
+        from: "video_movieDetails",
+        localField: "title",
+        foreignField: "title",
+        as: "movieDetails" 
+      }
+    },
+    {
+      $unwind: "$movieDetails"
+    },
+    {
+      $match: {
+        "movieDetails.countries": "France"
+      }
+    },
+    {
+      $project: {
+        _id: 0,
+        title: 1
+      }
+    }
+])

@@ -1,0 +1,3 @@
+db.video_movieDetails.find({
+    director: { $regex: /,/ }
+})

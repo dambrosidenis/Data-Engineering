@@ -1,0 +1,75 @@
+\documentclass{article}
+
+% Packages
+\usepackage[utf8]{inputenc} % UTF-8 encoding
+\usepackage{listings} % For including code snippets
+\usepackage{inconsolata} % Inconsolata monospaced font
+\usepackage{xcolor} % For custom colors
+\usepackage{lipsum} % Generates Lorem Ipsum text for demonstration
+
+% Listings Settings
+\lstdefinestyle{mystyle}{
+    basicstyle=\ttfamily, % Use monospaced font for listings
+    breaklines=true, % Wrap long lines,
+    keywordstyle=\color{blue}, % Keywords in blue
+    commentstyle=\color{green!40!black}, % Comments in green
+    numbers=left, % Line numbers on the left
+    numberstyle=\tiny\color{gray}, % Line numbers style
+    frame=single, % Single frame around code
+    tabsize=4, % Tab size
+    extendedchars=true,
+    literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1,
+    showstringspaces=false % Don't show spaces in strings
+}
+
+% Title and Author
+\title{NoSQL}
+\author{D'Ambrosi Denis}
+\date{\today} % Use \date{} for a specific date
+
+\begin{document}
+
+\maketitle
+\clearpage
+
+\section*{Exercise 1}
+
+\subsection*{Exercise a.}
+\lstinputlisting[style=mystyle]{es_1_a.nosql}
+
+\subsection*{Exercise b.}
+\lstinputlisting[style=mystyle]{es_1_b.nosql}
+
+\subsection*{Exercise c.}
+\lstinputlisting[style=mystyle]{es_1_c.nosql}
+
+\subsection*{Exercise d.}
+\lstinputlisting[style=mystyle]{es_1_d.nosql}
+
+\subsection*{Exercise e.}
+\lstinputlisting[style=mystyle]{es_1_e.nosql}
+
+\subsection*{Exercise f.}
+\lstinputlisting[style=mystyle]{es_1_f.nosql}
+
+\subsection*{Exercise g.}
+\lstinputlisting[style=mystyle]{es_1_g.nosql}
+
+\clearpage
+
+\section*{Exercise 2}
+
+\subsection*{Exercise a.}
+\lstinputlisting[style=mystyle]{es_2_a.nosql}
+
+\subsection*{Exercise b.}
+\lstinputlisting[style=mystyle]{es_2_b.nosql}
+
+\subsection*{Exercise c.}
+\lstinputlisting[style=mystyle]{es_2_c.nosql}
+\clearpage
+
+\section*{Exercise 3}
+\input{es3.tex}
+
+\end{document}

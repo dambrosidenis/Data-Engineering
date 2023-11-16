@@ -1,0 +1,29 @@
+db.video_movieDetails.aggregate([
+    {
+      $project: {
+        director: {
+          $cond: {
+            if: { $regexMatch: { input: "$director", regex: /,/ } },
+            then: { $split: ["$director", ", "] },
+            else: ["$director"]
+          }
+        }
+      }
+    },
+    {
+      $unwind: "$director"
+    },
+    {
+      $group: {
+        _id: "$director",
+        movieCount: { $sum: 1 }
+      }
+    },
+    {
+      $project: {
+        director: "$_id",
+        movieCount: 1,
+        _id: 0
+      }
+    }
+])

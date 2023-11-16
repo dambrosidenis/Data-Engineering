@@ -1,0 +1,4 @@
+db.video_movieDetails.updateMany(
+    { director: "Roland Emmerich" },
+    { $set: { director: "R. Emmerich" } }
+)

@@ -1,0 +1,6 @@
+db.video_movieDetails.find({
+    $or : [
+        { "director" : null },
+        { "director" : "Jon Brewer" }
+    ]
+})

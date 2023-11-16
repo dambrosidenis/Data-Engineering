@@ -1,0 +1,6 @@
+db.video_movieDetails.find({
+    $and : [
+        { "director" : "Curt McDowell" },
+        { "year" : 1980 }
+    ]
+})

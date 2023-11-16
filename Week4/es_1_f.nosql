@@ -1,0 +1,5 @@
+db.video_movieDetails.find({ 
+    "actors" : {
+        $all : ["Martin Lawrence", "Will Smith"]
+    }
+})

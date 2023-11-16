@@ -1,0 +1,6 @@
+db.video_movieDetails.find({ 
+    $and : [
+            { "actors" : { $all : ["Martin Lawrence", "Will Smith"] } },
+            { "awards.wins" : { $gt : 2 } }
+    ]
+})

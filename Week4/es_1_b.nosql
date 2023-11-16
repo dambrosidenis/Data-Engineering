@@ -1,0 +1,4 @@
+db.video_movieDetails.find(
+    { "director" : "George Lucas" },
+    { "title" : 1 }
+)
