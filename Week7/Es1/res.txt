@@ -1,0 +1,8 @@
+(hadoop,1)
+(with,1)
+(all,1)
+(framework,1)
+(count,1)
+(words,1)
+(lets,1)
+(the,2)
